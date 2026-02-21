@@ -1,0 +1,309 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-splash-screen-that-displays-on-app-launch-with-the-cineverse-branding",
+      "featureTitle": "Create a splash screen that displays on app launch with the CineVerse branding",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/SplashScreen.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-a-home-screen-with-a-trending-movies-carousel-banner-at-the-top-that-auto-rotates-through-featured-movies",
+      "featureTitle": "Build a home screen with a trending movies carousel banner at the top that auto-rotates through featured movies",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/TrendingCarousel.tsx",
+        "frontend/src/pages/Home.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-display-movie-category-sections-on-the-home-screen-for-action-comedy-kids-bollywood-and-hollywood-with-horizontal-scrollable-movie-cards",
+      "featureTitle": "Display movie category sections on the home screen for Action, Comedy, Kids, Bollywood, and Hollywood with horizontal scrollable movie cards",
+      "files": [
+        "frontend/src/components/CategorySection.tsx",
+        "frontend/src/components/MovieCard.tsx",
+        "frontend/src/pages/Home.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-an-ai-recommendation-section-on-the-home-screen-that-suggests-movies-based-on-user-interests",
+      "featureTitle": "Create an AI recommendation section on the home screen that suggests movies based on user interests",
+      "files": [
+        "frontend/src/components/AIRecommendations.tsx",
+        "frontend/src/pages/Home.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-a-movie-detail-page-that-displays-movie-poster-trailer-preview-player-rating-cast-list-description-and-a-watch-button",
+      "featureTitle": "Build a movie detail page that displays movie poster, trailer preview player, rating, cast list, description, and a watch button",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/MovieDetail.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-search-bar-with-smart-suggestions-that-appears-when-users-start-typing-movie-titles-or-keywords",
+      "featureTitle": "Implement a search bar with smart suggestions that appears when users start typing movie titles or keywords",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Navigation.tsx",
+        "frontend/src/components/SearchBar.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-watchlist-feature-where-users-can-add-and-remove-movies-to-watch-later",
+      "featureTitle": "Create a watchlist feature where users can add and remove movies to watch later",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/MovieDetail.tsx",
+        "frontend/src/pages/Watchlist.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-a-continue-watching-section-that-tracks-partially-watched-movies-and-displays-them-for-easy-resume",
+      "featureTitle": "Build a Continue Watching section that tracks partially watched movies and displays them for easy resume",
+      "files": [
+        "frontend/src/components/ContinueWatching.tsx",
+        "frontend/src/pages/Home.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-kids-mode-with-a-colorful-safe-interface-that-filters-content-appropriate-for-children",
+      "featureTitle": "Create a Kids Mode with a colorful, safe interface that filters content appropriate for children",
+      "files": [
+        "frontend/src/components/KidsModeToggle.tsx",
+        "frontend/src/hooks/useKidsMode.ts",
+        "frontend/src/pages/Home.tsx",
+        "frontend/src/pages/Profile.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-user-login-and-signup-flows-with-authentication-and-profile-creation",
+      "featureTitle": "Build user login and signup flows with authentication and profile creation",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/LoginButton.tsx",
+        "frontend/src/components/ProfileSetupModal.tsx",
+        "frontend/src/hooks/useAuth.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-profile-page-that-displays-user-information-preferences-and-settings-options",
+      "featureTitle": "Create a profile page that displays user information, preferences, and settings options",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/Profile.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-categories-page-that-allows-users-to-browse-all-available-movie-categories",
+      "featureTitle": "Create a categories page that allows users to browse all available movie categories",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/Categories.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-navigation-flow-that-allows-users-to-move-between-splash-screen-home-categories-movie-details-search-and-profile-pages",
+      "featureTitle": "Implement navigation flow that allows users to move between Splash Screen, Home, Categories, Movie Details, Search, and Profile pages",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Navigation.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-14"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-dark-cinematic-ui-theme-with-minimal-premium-ott-styling-smooth-animations-rounded-cards-modern-fonts-and-mobile-first-layout-optimized-for-android-devices",
+      "featureTitle": "Apply a dark cinematic UI theme with minimal premium OTT styling, smooth animations, rounded cards, modern fonts, and mobile-first layout optimized for Android devices",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-15"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,328 @@
+{
+  "kind": "build_request",
+  "title": "Build CineVerse movie streaming app with cinematic UI",
+  "projectName": "CineVerse",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a splash screen that displays on app launch with the CineVerse branding",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Splash Screen"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Splash screen displays CineVerse branding",
+        "Screen transitions to home after brief delay",
+        "Uses dark cinematic theme"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Build a home screen with a trending movies carousel banner at the top that auto-rotates through featured movies",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Home screen with trending movie banners"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Carousel displays trending movie banners",
+        "Auto-rotation with smooth transitions",
+        "Users can manually swipe between banners",
+        "Each banner shows movie poster and title"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Display movie category sections on the home screen for Action, Comedy, Kids, Bollywood, and Hollywood with horizontal scrollable movie cards",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "categories (Action, Comedy, Kids, Bollywood, Hollywood)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Five category sections displayed on home screen",
+        "Each section has a category title",
+        "Horizontal scrollable list of movie cards per category",
+        "Movie cards show poster thumbnail and title"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Create an AI recommendation section on the home screen that suggests movies based on user interests",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "AI recommendation section based on user interests"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Recommendation section appears on home screen",
+        "Section labeled as personalized or AI-powered recommendations",
+        "Displays recommended movie cards horizontally",
+        "Recommendations update based on user watch history or preferences"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Build a movie detail page that displays movie poster, trailer preview player, rating, cast list, description, and a watch button",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Movie detail page with poster, trailer preview, rating, cast, and watch button"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Detail page shows large movie poster",
+        "Trailer preview embedded with play controls",
+        "Rating displayed prominently",
+        "Cast members listed with names and roles",
+        "Movie description text shown",
+        "Watch button navigates to playback or adds to continue watching"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Implement a search bar with smart suggestions that appears when users start typing movie titles or keywords",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Search bar with smart suggestions"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Search bar accessible from navigation",
+        "Real-time suggestions appear as user types",
+        "Suggestions include movie titles and relevant matches",
+        "Clicking a suggestion navigates to movie detail page"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Create a watchlist feature where users can add and remove movies to watch later",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Watchlist"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Add to watchlist button on movie detail page",
+        "Watchlist accessible from profile or navigation",
+        "Displays all saved movies with posters",
+        "Users can remove movies from watchlist"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Build a Continue Watching section that tracks partially watched movies and displays them for easy resume",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Continue Watching"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Continue Watching section appears on home screen",
+        "Shows movies user has started but not finished",
+        "Each card displays progress indicator",
+        "Clicking resumes playback from last position"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Create a Kids Mode with a colorful, safe interface that filters content appropriate for children",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Kids Mode with colorful safe interface"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Kids Mode toggle accessible from profile or settings",
+        "Interface uses bright, playful colors when active",
+        "Only displays age-appropriate content",
+        "Visual indicator shows Kids Mode is active"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Build user login and signup flows with authentication and profile creation",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "User login/signup"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Signup form collects necessary user information",
+        "Login form authenticates existing users",
+        "Session persists after successful login",
+        "Error messages display for invalid credentials"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Create a profile page that displays user information, preferences, and settings options",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "profile page"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Profile page shows user name and avatar",
+        "Settings options accessible",
+        "Kids Mode toggle available",
+        "Logout option present"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Create a categories page that allows users to browse all available movie categories",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Categories",
+          "Pages to Generate"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Dedicated categories page accessible from navigation",
+        "All movie categories displayed with visual cards or tiles",
+        "Clicking a category shows movies in that category"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Populate the app with sample movie data including titles, posters, ratings, cast, descriptions, trailers, and category classifications",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Include sample movie data"
+        ]
+      },
+      "acceptanceCriteria": [
+        "At least 20 sample movies with complete metadata",
+        "Movies distributed across all categories",
+        "Each movie has poster image, rating, cast, and description",
+        "Sample data includes movies suitable for Kids Mode"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Implement navigation flow that allows users to move between Splash Screen, Home, Categories, Movie Details, Search, and Profile pages",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "simple navigation flow"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigation menu or bottom bar accessible from main screens",
+        "Users can navigate to all major sections",
+        "Back navigation works consistently",
+        "Smooth transitions between pages"
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "text": "Apply a dark cinematic UI theme with minimal premium OTT styling, smooth animations, rounded cards, modern fonts, and mobile-first layout optimized for Android devices",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "dark cinematic UI",
+          "Minimal, premium OTT style like Netflix, smooth animations, rounded cards, modern fonts, mobile-first layout"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Dark color scheme with cinematic blacks and deep grays",
+        "Rounded corners on all cards and containers",
+        "Smooth transitions and micro-animations",
+        "Modern, readable typography throughout",
+        "Layout optimized for mobile portrait orientation",
+        "Touch targets sized appropriately for mobile",
+        "Fast loading with optimized images"
+      ]
+    }
+  ],
+  "constraints": [
+    "Use Internet Identity for authentication instead of custom login system",
+    "Frontend must use React, Tailwind CSS, and React Query",
+    "Backend must use Motoko with single-actor architecture",
+    "No external database or third-party video streaming APIs",
+    "No real-time WebSocket features for live updates"
+  ],
+  "nonGoals": [
+    "Actual video streaming or playback functionality",
+    "Integration with real movie databases or APIs",
+    "Payment processing or subscription management",
+    "Social features like comments or ratings from other users",
+    "Offline download capability",
+    "Multiple language subtitle support",
+    "Chromecast or TV casting features"
+  ],
+  "imageRequirements": {
+    "required": [
+      "CineVerse logo with cinematic styling on dark background for splash screen and branding (cineverse-logo.dim_512x512.png)",
+      "Trending movie banner background with dark cinematic gradient (trending-banner-bg.dim_1200x400.png)",
+      "Kids Mode colorful banner background with playful illustrations (kids-mode-banner.dim_1200x400.png)",
+      "Default user avatar placeholder icon (user-avatar.dim_128x128.png)",
+      "Sample movie poster for action category (movie-action-1.dim_300x450.png)",
+      "Sample movie poster for comedy category (movie-comedy-1.dim_300x450.png)",
+      "Sample movie poster for kids category (movie-kids-1.dim_300x450.png)",
+      "Sample movie poster for Bollywood category (movie-bollywood-1.dim_300x450.png)",
+      "Sample movie poster for Hollywood category (movie-hollywood-1.dim_300x450.png)"
+    ],
+    "edits": []
+  }
+}

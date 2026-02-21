@@ -1,0 +1,191 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Android movie streaming app called CineVerse with dark cinematic UI, featuring trending movies, categories, AI recommendations, movie details, search, watchlist, continue watching, kids mode, and user profiles",
+  "architectural_notes": [
+    "Dark cinematic UI theme with glassmorphism and minimal design",
+    "Netflix/Disney+ style OTT platform interface with rounded cards",
+    "Mobile-first Android layout with smooth animations and micro-interactions",
+    "Sample movie data included for demonstration",
+    "Navigation flow: Splash → Home → Categories/Search/Movie Details → Profile"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- CineVerse logo with cinematic styling on dark background for splash screen and branding (cineverse-logo.dim_512x512.png)\n- Trending movie banner background with dark cinematic gradient (trending-banner-bg.dim_1200x400.png)\n- Kids Mode colorful banner background with playful illustrations (kids-mode-banner.dim_1200x400.png)\n- Default user avatar placeholder icon (user-avatar.dim_128x128.png)\n- Sample movie poster for action category (movie-action-1.dim_300x450.png)\n- Sample movie poster for comedy category (movie-comedy-1.dim_300x450.png)\n- Sample movie poster for kids category (movie-kids-1.dim_300x450.png)\n- Sample movie poster for Bollywood category (movie-bollywood-1.dim_300x450.png)\n- Sample movie poster for Hollywood category (movie-hollywood-1.dim_300x450.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-splash-screen-that-displays-on-app-launch-with-the-cineverse-branding",
+      "title": "Create a splash screen that displays on app launch with the CineVerse branding",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-home-screen-with-a-trending-movies-carousel-banner-at-the-top-that-auto-rotates-through-featured-movies",
+      "title": "Build a home screen with a trending movies carousel banner at the top that auto-rotates through featured movies",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-movie-category-sections-on-the-home-screen-for-action-comedy-kids-bollywood-and-hollywood-with-horizontal-scrollable-movie-cards",
+      "title": "Display movie category sections on the home screen for Action, Comedy, Kids, Bollywood, and Hollywood with horizontal scrollable movie cards",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-an-ai-recommendation-section-on-the-home-screen-that-suggests-movies-based-on-user-interests",
+      "title": "Create an AI recommendation section on the home screen that suggests movies based on user interests",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-movie-detail-page-that-displays-movie-poster-trailer-preview-player-rating-cast-list-description-and-a-watch-button",
+      "title": "Build a movie detail page that displays movie poster, trailer preview player, rating, cast list, description, and a watch button",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-search-bar-with-smart-suggestions-that-appears-when-users-start-typing-movie-titles-or-keywords",
+      "title": "Implement a search bar with smart suggestions that appears when users start typing movie titles or keywords",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-watchlist-feature-where-users-can-add-and-remove-movies-to-watch-later",
+      "title": "Create a watchlist feature where users can add and remove movies to watch later",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-continue-watching-section-that-tracks-partially-watched-movies-and-displays-them-for-easy-resume",
+      "title": "Build a Continue Watching section that tracks partially watched movies and displays them for easy resume",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-kids-mode-with-a-colorful-safe-interface-that-filters-content-appropriate-for-children",
+      "title": "Create a Kids Mode with a colorful, safe interface that filters content appropriate for children",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-user-login-and-signup-flows-with-authentication-and-profile-creation",
+      "title": "Build user login and signup flows with authentication and profile creation",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-profile-page-that-displays-user-information-preferences-and-settings-options",
+      "title": "Create a profile page that displays user information, preferences, and settings options",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-categories-page-that-allows-users-to-browse-all-available-movie-categories",
+      "title": "Create a categories page that allows users to browse all available movie categories",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-navigation-flow-that-allows-users-to-move-between-splash-screen-home-categories-movie-details-search-and-profile-pages",
+      "title": "Implement navigation flow that allows users to move between Splash Screen, Home, Categories, Movie Details, Search, and Profile pages",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-dark-cinematic-ui-theme-with-minimal-premium-ott-styling-smooth-animations-rounded-cards-modern-fonts-and-mobile-first-layout-optimized-for-android-devices",
+      "title": "Apply a dark cinematic UI theme with minimal premium OTT styling, smooth animations, rounded cards, modern fonts, and mobile-first layout optimized for Android devices",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Home screen with trending movie banners and category sections (Action, Comedy, Kids, Bollywood, Hollywood)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "AI recommendation section based on user interests",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Movie detail page with poster, trailer preview, rating, cast, and watch button",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Search with smart suggestions",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Watchlist and Continue Watching sections",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Kids Mode with colorful safe interface",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "User login/signup and profile page",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Splash screen",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-21",
+      "summary": "Populate the app with sample movie data including titles, posters, ratings, cast, descriptions, trailers, and category classifications",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "CineVerse",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

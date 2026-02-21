@@ -1,0 +1,368 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "CineVerse Movie Streaming App Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create splash screen with CineVerse branding that displays on app launch",
+      "acceptanceCriteria": [
+        "Splash screen displays CineVerse branding",
+        "Screen transitions to home after brief delay",
+        "Uses dark cinematic theme"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SplashScreen.tsx",
+          "operation": "create",
+          "description": "Create splash screen component that displays the CineVerse logo from frontend/public/assets/generated/cineverse-logo.dim_512x512.png with dark cinematic background, includes auto-transition timer to home screen after 2-3 seconds"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add splash screen routing and state management to show SplashScreen component on initial load, then transition to home page after delay"
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Build home screen trending movies carousel that auto-rotates through featured movies",
+      "acceptanceCriteria": [
+        "Carousel displays trending movie banners",
+        "Auto-rotation with smooth transitions",
+        "Users can manually swipe between banners",
+        "Each banner shows movie poster and title"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/TrendingCarousel.tsx",
+          "operation": "create",
+          "description": "Create auto-rotating carousel component for trending movies with manual swipe controls, smooth transitions, displays movie posters and titles, uses frontend/public/assets/generated/trending-banner-bg.dim_1200x400.png as background overlay, fetches trending movies from backend"
+        },
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "create",
+          "description": "Create home page component that includes TrendingCarousel at the top, CategorySections below, and other home features (Continue Watching, AI Recommendations), fetches movie data via backend interface"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for Home page and set as default landing page after splash screen"
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Display movie category sections with horizontal scrollable cards for Action, Comedy, Kids, Bollywood, and Hollywood",
+      "acceptanceCriteria": [
+        "Five category sections displayed on home screen",
+        "Each section has a category title",
+        "Horizontal scrollable list of movie cards per category",
+        "Movie cards show poster thumbnail and title"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CategorySection.tsx",
+          "operation": "create",
+          "description": "Create reusable category section component with title and horizontal scrollable movie card list, uses generated movie posters (movie-action-1.dim_300x450.png, movie-comedy-1.dim_300x450.png, movie-kids-1.dim_300x450.png, movie-bollywood-1.dim_300x450.png, movie-hollywood-1.dim_300x450.png) as placeholders, filters movies by category prop"
+        },
+        {
+          "path": "frontend/src/components/MovieCard.tsx",
+          "operation": "create",
+          "description": "Create movie card component displaying poster thumbnail and title with rounded corners, smooth hover animations, links to movie detail page on click"
+        },
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "modify",
+          "description": "Add five CategorySection components for Action, Comedy, Kids, Bollywood, and Hollywood categories, positioned below TrendingCarousel"
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Create AI recommendation section that suggests movies based on user interests",
+      "acceptanceCriteria": [
+        "Recommendation section appears on home screen",
+        "Section labeled as personalized or AI-powered recommendations",
+        "Displays recommended movie cards horizontally",
+        "Recommendations update based on user watch history or preferences"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/AIRecommendations.tsx",
+          "operation": "create",
+          "description": "Create AI recommendations section component with horizontal scrollable movie cards, labeled as personalized recommendations, filters movies based on user profile preferences from getCallerUserProfile(), uses MovieCard component for display"
+        },
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "modify",
+          "description": "Add AIRecommendations component to home page below category sections, only visible when user is authenticated"
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Build movie detail page displaying poster, trailer preview, rating, cast, description, and watch button",
+      "acceptanceCriteria": [
+        "Detail page shows large movie poster",
+        "Trailer preview embedded with play controls",
+        "Rating displayed prominently",
+        "Cast members listed with names and roles",
+        "Movie description text shown",
+        "Watch button navigates to playback or adds to continue watching"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/MovieDetail.tsx",
+          "operation": "create",
+          "description": "Create movie detail page component displaying large poster using ExternalBlob getDirectURL(), trailer preview player using ExternalBlob for video, rating stars/number, cast list, description text, watch button that adds movie to continue watching list, add to watchlist button, fetches movie data by ID from backend getAllMovies()"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for MovieDetail page with dynamic movie ID parameter"
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Implement search bar with smart suggestions that appears when typing",
+      "acceptanceCriteria": [
+        "Search bar accessible from navigation",
+        "Real-time suggestions appear as user types",
+        "Suggestions include movie titles and relevant matches",
+        "Clicking a suggestion navigates to movie detail page"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SearchBar.tsx",
+          "operation": "create",
+          "description": "Create search bar component with real-time movie title suggestions using debounced input, filters movies from getAllMovies() based on title match, dropdown shows suggestions with movie posters, clicking suggestion navigates to MovieDetail page"
+        },
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "create",
+          "description": "Create navigation component with SearchBar embedded, includes links to Home, Categories, Watchlist, and Profile pages, mobile-optimized bottom navigation bar"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add Navigation component to main app layout, visible on all pages except splash screen"
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Create watchlist feature to add and remove movies",
+      "acceptanceCriteria": [
+        "Add to watchlist button on movie detail page",
+        "Watchlist accessible from profile or navigation",
+        "Displays all saved movies with posters",
+        "Users can remove movies from watchlist"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Watchlist.tsx",
+          "operation": "create",
+          "description": "Create watchlist page component displaying saved movies using getWatchlist(), shows movie cards with posters in grid layout, includes remove button per movie calling removeFromWatchlist(), empty state when no movies saved, requires user authentication"
+        },
+        {
+          "path": "frontend/src/pages/MovieDetail.tsx",
+          "operation": "modify",
+          "description": "Add watchlist toggle button that calls addToWatchlist() or removeFromWatchlist() based on current state, shows visual feedback when movie is in watchlist, requires user authentication"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for Watchlist page accessible from navigation"
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Build Continue Watching section tracking partially watched movies for easy resume",
+      "acceptanceCriteria": [
+        "Continue Watching section appears on home screen",
+        "Shows movies user has started but not finished",
+        "Each card displays progress indicator",
+        "Clicking resumes playback from last position"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ContinueWatching.tsx",
+          "operation": "create",
+          "description": "Create Continue Watching section component with horizontal scrollable movie cards showing watch progress indicators, fetches movies from user profile preferences or local storage, clicking card navigates to MovieDetail page, only visible when user is authenticated"
+        },
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "modify",
+          "description": "Add ContinueWatching component to home page positioned above category sections, only displayed when user has partially watched movies"
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Create Kids Mode with colorful safe interface filtering child-appropriate content",
+      "acceptanceCriteria": [
+        "Kids Mode toggle accessible from profile or settings",
+        "Interface uses bright, playful colors when active",
+        "Only displays age-appropriate content",
+        "Visual indicator shows Kids Mode is active"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/KidsModeToggle.tsx",
+          "operation": "create",
+          "description": "Create Kids Mode toggle component that updates user profile isKidsMode flag via saveCallerUserProfile(), displays colorful indicator when active using frontend/public/assets/generated/kids-mode-banner.dim_1200x400.png as visual element"
+        },
+        {
+          "path": "frontend/src/hooks/useKidsMode.ts",
+          "operation": "create",
+          "description": "Create custom hook to manage Kids Mode state from user profile, provides isKidsMode boolean and toggle function, filters movie content based on Kids category when active"
+        },
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "modify",
+          "description": "Apply Kids Mode filtering using useKidsMode hook, show only Kids category movies when active, apply bright playful color scheme override, display Kids Mode banner at top when active"
+        },
+        {
+          "path": "frontend/src/pages/Profile.tsx",
+          "operation": "modify",
+          "description": "Add KidsModeToggle component to profile page settings section"
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Build user login and signup flows with authentication and profile creation",
+      "acceptanceCriteria": [
+        "Signup form collects necessary user information",
+        "Login form authenticates existing users",
+        "Session persists after successful login",
+        "Error messages display for invalid credentials"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/LoginButton.tsx",
+          "operation": "create",
+          "description": "Use the authorization component to support Internet Identity authentication. Create login button component using useInternetIdentity hook, handles login/logout flow, clears query cache on logout, shows loading states. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ProfileSetupModal.tsx",
+          "operation": "create",
+          "description": "Use the authorization component to support user profile setup. Create profile setup modal that appears on first login when getCallerUserProfile() returns null, collects user name and preferences, calls saveCallerUserProfile() to persist, prevents flash by checking isFetched flag. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/hooks/useAuth.ts",
+          "operation": "create",
+          "description": "Use the authorization component to support authentication state management. Create custom hook wrapping useInternetIdentity and user profile queries, provides isAuthenticated, userProfile, isLoading states, handles profile fetch with proper loading states to prevent modal flash. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add authentication check wrapper, show ProfileSetupModal when user has no profile, require authentication for watchlist and profile pages, use authorization component error handling for unauthorized access"
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Create profile page displaying user information, preferences, and settings",
+      "acceptanceCriteria": [
+        "Profile page shows user name and avatar",
+        "Settings options accessible",
+        "Kids Mode toggle available",
+        "Logout option present"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Profile.tsx",
+          "operation": "create",
+          "description": "Create profile page component displaying user name from getCallerUserProfile(), avatar using frontend/public/assets/generated/user-avatar.dim_128x128.png as default, preferences list, Kids Mode toggle, logout button using LoginButton component, requires authentication"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for Profile page accessible from navigation, protected by authentication check"
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Create categories page for browsing all movie categories",
+      "acceptanceCriteria": [
+        "Dedicated categories page accessible from navigation",
+        "All movie categories displayed with visual cards or tiles",
+        "Clicking a category shows movies in that category"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Categories.tsx",
+          "operation": "create",
+          "description": "Create categories page component displaying all five categories (Action, Comedy, Kids, Bollywood, Hollywood) as visual tiles with representative imagery from generated movie posters, clicking category tile navigates to category-specific view showing filtered movies using CategorySection component"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for Categories page accessible from navigation menu"
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Implement navigation flow between all major pages",
+      "acceptanceCriteria": [
+        "Navigation menu or bottom bar accessible from main screens",
+        "Users can navigate to all major sections",
+        "Back navigation works consistently",
+        "Smooth transitions between pages"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "modify",
+          "description": "Ensure Navigation component includes links to all major pages: Home, Categories, Watchlist, Profile, with active state indicators, mobile-optimized bottom navigation layout, smooth transitions"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Configure React Router with all page routes (Splash, Home, Categories, MovieDetail, Watchlist, Profile), ensure proper navigation flow with back button support and route transitions"
+        }
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "summary": "Apply dark cinematic UI theme with premium OTT styling and mobile-first layout",
+      "acceptanceCriteria": [
+        "Dark color scheme with cinematic blacks and deep grays",
+        "Rounded corners on all cards and containers",
+        "Smooth transitions and micro-animations",
+        "Modern, readable typography throughout",
+        "Layout optimized for mobile portrait orientation",
+        "Touch targets sized appropriately for mobile",
+        "Fast loading with optimized images"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Apply dark cinematic color palette (blacks, deep grays, subtle highlights), set base typography with modern font stack, define smooth transition defaults, ensure mobile-first responsive scaling"
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Configure Tailwind theme with cinematic dark colors (background, foreground, accent), rounded corner utilities, animation presets for smooth micro-interactions, mobile-first breakpoints, touch-friendly spacing scale"
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "create",
+          "description": "Create layout wrapper component applying consistent dark cinematic styling, includes Navigation component, provides page container with proper mobile padding and max-width constraints"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wrap all page routes with Layout component to ensure consistent dark cinematic theme and navigation across all pages"
+        }
+      ]
+    }
+  ]
+}

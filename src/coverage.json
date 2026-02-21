@@ -1,0 +1,356 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-21T09:27:17.912Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 15,
+    "implemented": 14,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Create a splash screen that displays on app launch with the CineVerse branding",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/SplashScreen.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/SplashScreen.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-10",
+        "summary": "Build user login and signup flows with authentication and profile creation",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/LoginButton.tsx",
+          "frontend/src/components/ProfileSetupModal.tsx",
+          "frontend/src/hooks/useAuth.ts",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/LoginButton.tsx",
+          "frontend/src/components/ProfileSetupModal.tsx",
+          "frontend/src/hooks/useAuth.ts",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-11",
+        "summary": "Create a profile page that displays user information, preferences, and settings options",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Profile.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Profile.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-12",
+        "summary": "Create a categories page that allows users to browse all available movie categories",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Categories.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Categories.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-13",
+        "summary": "Populate the app with sample movie data including titles, posters, ratings, cast, descriptions, trailers, and category classifications",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-14",
+        "summary": "Implement navigation flow that allows users to move between Splash Screen, Home, Categories, Movie Details, Search, and Profile pages",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-15",
+        "summary": "Apply a dark cinematic UI theme with minimal premium OTT styling, smooth animations, rounded cards, modern fonts, and mobile-first layout optimized for Android devices",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/components/Layout.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/components/Layout.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Build a home screen with a trending movies carousel banner at the top that auto-rotates through featured movies",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/TrendingCarousel.tsx",
+          "frontend/src/pages/Home.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/TrendingCarousel.tsx",
+          "frontend/src/pages/Home.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Display movie category sections on the home screen for Action, Comedy, Kids, Bollywood, and Hollywood with horizontal scrollable movie cards",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/CategorySection.tsx",
+          "frontend/src/components/MovieCard.tsx",
+          "frontend/src/pages/Home.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/CategorySection.tsx",
+          "frontend/src/components/MovieCard.tsx",
+          "frontend/src/pages/Home.tsx"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Create an AI recommendation section on the home screen that suggests movies based on user interests",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/AIRecommendations.tsx",
+          "frontend/src/pages/Home.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/AIRecommendations.tsx",
+          "frontend/src/pages/Home.tsx"
+        ]
+      },
+      {
+        "id": "REQ-5",
+        "summary": "Build a movie detail page that displays movie poster, trailer preview player, rating, cast list, description, and a watch button",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/MovieDetail.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/MovieDetail.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-6",
+        "summary": "Implement a search bar with smart suggestions that appears when users start typing movie titles or keywords",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/SearchBar.tsx",
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/SearchBar.tsx",
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-7",
+        "summary": "Create a watchlist feature where users can add and remove movies to watch later",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Watchlist.tsx",
+          "frontend/src/pages/MovieDetail.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Watchlist.tsx",
+          "frontend/src/pages/MovieDetail.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-8",
+        "summary": "Build a Continue Watching section that tracks partially watched movies and displays them for easy resume",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/ContinueWatching.tsx",
+          "frontend/src/pages/Home.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/ContinueWatching.tsx",
+          "frontend/src/pages/Home.tsx"
+        ]
+      },
+      {
+        "id": "REQ-9",
+        "summary": "Create a Kids Mode with a colorful, safe interface that filters content appropriate for children",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/KidsModeToggle.tsx",
+          "frontend/src/hooks/useKidsMode.ts",
+          "frontend/src/pages/Home.tsx",
+          "frontend/src/pages/Profile.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/KidsModeToggle.tsx",
+          "frontend/src/hooks/useKidsMode.ts",
+          "frontend/src/pages/Home.tsx",
+          "frontend/src/pages/Profile.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/authorization/MixinAuthorization.mo",
+    "backend/authorization/access-control.mo",
+    "backend/blob-storage/Mixin.mo",
+    "backend/blob-storage/Storage.mo",
+    "backend/main.mo",
+    "build-request.json",
+    "build-template/Dockerfile",
+    "build-template/LICENSE",
+    "build-template/README.md",
+    "build-template/deploy.sh",
+    "build-template/icp.yaml",
+    "build-template/package.json",
+    "build-template/pnpm-lock.yaml",
+    "build-template/pnpm-workspace.yaml",
+    "build-template/scripts/prune-unused-images.js",
+    "build-template/scripts/resize-images.js",
+    "build-template/src/backend/canister.yaml",
+    "build-template/src/backend/system-idl/aaaaa-aa.did",
+    "build-template/src/frontend/canister.yaml",
+    "build-template/src/frontend/components.json",
+    "build-template/src/frontend/env.json",
+    "build-template/src/frontend/eslint-rules/no-bigint-in-query-keys.js",
+    "build-template/src/frontend/eslint-rules/require-internet-identity-provider.js",
+    "build-template/src/frontend/eslint.config.js",
+    "build-template/src/frontend/package.json",
+    "build-template/src/frontend/postcss.config.js",
+    "build-template/src/frontend/src/components/ui/accordion.tsx",
+    "build-template/src/frontend/src/components/ui/alert-dialog.tsx",
+    "build-template/src/frontend/src/components/ui/alert.tsx",
+    "build-template/src/frontend/src/components/ui/aspect-ratio.tsx",
+    "build-template/src/frontend/src/components/ui/avatar.tsx",
+    "build-template/src/frontend/src/components/ui/badge.tsx",
+    "build-template/src/frontend/src/components/ui/breadcrumb.tsx",
+    "build-template/src/frontend/src/components/ui/button.tsx",
+    "build-template/src/frontend/src/components/ui/calendar.tsx",
+    "build-template/src/frontend/src/components/ui/card.tsx",
+    "build-template/src/frontend/src/components/ui/carousel.tsx",
+    "build-template/src/frontend/src/components/ui/chart.tsx",
+    "build-template/src/frontend/src/components/ui/checkbox.tsx",
+    "build-template/src/frontend/src/components/ui/collapsible.tsx",
+    "build-template/src/frontend/src/components/ui/command.tsx",
+    "build-template/src/frontend/src/components/ui/context-menu.tsx",
+    "build-template/src/frontend/src/components/ui/dialog.tsx",
+    "build-template/src/frontend/src/components/ui/drawer.tsx",
+    "build-template/src/frontend/src/components/ui/dropdown-menu.tsx",
+    "build-template/src/frontend/src/components/ui/form.tsx",
+    "build-template/src/frontend/src/components/ui/hover-card.tsx",
+    "build-template/src/frontend/src/components/ui/input-otp.tsx",
+    "build-template/src/frontend/src/components/ui/input.tsx",
+    "build-template/src/frontend/src/components/ui/label.tsx",
+    "build-template/src/frontend/src/components/ui/menubar.tsx",
+    "build-template/src/frontend/src/components/ui/navigation-menu.tsx",
+    "build-template/src/frontend/src/components/ui/pagination.tsx",
+    "build-template/src/frontend/src/components/ui/popover.tsx",
+    "build-template/src/frontend/src/components/ui/progress.tsx",
+    "build-template/src/frontend/src/components/ui/radio-group.tsx",
+    "build-template/src/frontend/src/components/ui/resizable.tsx",
+    "build-template/src/frontend/src/components/ui/scroll-area.tsx",
+    "build-template/src/frontend/src/components/ui/select.tsx",
+    "build-template/src/frontend/src/components/ui/separator.tsx",
+    "build-template/src/frontend/src/components/ui/sheet.tsx",
+    "build-template/src/frontend/src/components/ui/sidebar.tsx",
+    "build-template/src/frontend/src/components/ui/skeleton.tsx",
+    "build-template/src/frontend/src/components/ui/slider.tsx",
+    "build-template/src/frontend/src/components/ui/sonner.tsx",
+    "build-template/src/frontend/src/components/ui/switch.tsx",
+    "build-template/src/frontend/src/components/ui/table.tsx",
+    "build-template/src/frontend/src/components/ui/tabs.tsx",
+    "build-template/src/frontend/src/components/ui/textarea.tsx",
+    "build-template/src/frontend/src/components/ui/toggle-group.tsx",
+    "build-template/src/frontend/src/components/ui/toggle.tsx",
+    "build-template/src/frontend/src/components/ui/tooltip.tsx",
+    "build-template/src/frontend/src/hooks/use-mobile.tsx",
+    "build-template/src/frontend/src/lib/utils.ts",
+    "build-template/src/frontend/tsconfig.json",
+    "build-template/src/frontend/vite.config.js",
+    "build-template/tsconfig.json",
+    "caffeine.lock.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/public/assets/generated/cineverse-logo.dim_512x512.png",
+    "frontend/public/assets/generated/kids-mode-banner.dim_1200x400.png",
+    "frontend/public/assets/generated/movie-action-1.dim_300x450.png",
+    "frontend/public/assets/generated/movie-bollywood-1.dim_300x450.png",
+    "frontend/public/assets/generated/movie-comedy-1.dim_300x450.png",
+    "frontend/public/assets/generated/movie-hollywood-1.dim_300x450.png",
+    "frontend/public/assets/generated/movie-kids-1.dim_300x450.png",
+    "frontend/public/assets/generated/trending-banner-bg.dim_1200x400.png",
+    "frontend/public/assets/generated/user-avatar.dim_128x128.png",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/AIRecommendations.tsx",
+    "frontend/src/components/CategorySection.tsx",
+    "frontend/src/components/ContinueWatching.tsx",
+    "frontend/src/components/KidsModeToggle.tsx",
+    "frontend/src/components/Layout.tsx",
+    "frontend/src/components/LoginButton.tsx",
+    "frontend/src/components/MovieCard.tsx",
+    "frontend/src/components/Navigation.tsx",
+    "frontend/src/components/ProfileSetupModal.tsx",
+    "frontend/src/components/SearchBar.tsx",
+    "frontend/src/components/SplashScreen.tsx",
+    "frontend/src/components/TrendingCarousel.tsx",
+    "frontend/src/config.ts",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useAuth.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useKidsMode.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/Categories.tsx",
+    "frontend/src/pages/Home.tsx",
+    "frontend/src/pages/MovieDetail.tsx",
+    "frontend/src/pages/Profile.tsx",
+    "frontend/src/pages/Watchlist.tsx",
+    "frontend/src/ui-summary.json",
+    "frontend/src/utils/StorageClient.ts",
+    "frontend/src/utils/urlParams.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}
